@@ -1,0 +1,10 @@
+{
+  "name": "sun-scan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A cozy, glossy scanlation reading experience for licensed manga and manhwa.",
+  "scripts": {
+    "start": "python -m http.server 4173",
+    "check": "node --check app.js"
+  }
+}

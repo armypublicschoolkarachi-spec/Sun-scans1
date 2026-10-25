@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b090d" />
+    <meta name="description" content="Sun-Scan — a warm, glossy home for licensed manga and manhwa." />
+    <title>Sun-Scan — stories that glow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Sun-Scan home">
+        <img class="brand-logo" src="public/sun-scan-logo-transparent.png" alt="Sun-Scan" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-view="home">Home</button>
+        <button class="nav-link" data-view="browse">Browse</button>
+        <button class="nav-link" data-view="updates">Updates</button>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="searchButton" aria-label="Open search">⌕</button>
+        <button class="profile-button" id="profileButton"><span class="avatar-dot">S</span><span id="profileLabel">Sign in</span></button>
+        <button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero view active-view" id="home-view">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse-dot"></span> SUN-SCAN / NIGHTLY EDITION</div>
+          <h1>A good story<br />is worth staying <em>up</em> for.</h1>
+          <p class="hero-intro">A straightforward home for manga and manhwa you have the right to read. Pick up a series, keep your place, and come back when the next chapter lands.</p>
+          <div class="hero-actions">
+            <button class="primary-button" data-view="browse">Browse titles <span>↗</span></button>
+            <button class="text-button" data-view="updates">Latest updates <span>→</span></button>
+          </div>
+          <div class="hero-proof"><span><strong>Creator-first.</strong> Licensed, original, and approved releases only.</span></div>
+        </div>
+        <div class="hero-art" aria-label="Featured series">
+          <div class="hero-shelf">
+            <div class="shelf-cover cover-ember"><span class="shelf-number">01 / FEATURED</span><strong>EMBER<br /><i>HEARTS</i></strong><small>Fantasy · Romance</small></div>
+            <div class="shelf-details"><div class="shelf-kicker">FEATURED SERIES / UPDATED TODAY</div><h2>Ember Hearts</h2><p>A slow-burn fantasy about a city that remembers every goodbye.</p><div class="shelf-meta"><span>24 chapters</span><span>68% complete</span></div><button class="shelf-link" data-view="browse">Open series <span>→</span></button></div>
+          </div>
+          <div class="shelf-note"><span>NEW CHAPTER</span><strong>Ember Hearts · 24</strong><small>The lantern room</small></div>
+        </div>
+      </section>
+
+      <section class="content-shell">
+        <section class="section-block continue-block">
+          <div class="section-heading"><div><div class="eyebrow">PICK UP WHERE YOU LEFT OFF</div><h2>Back to your worlds</h2></div><button class="small-link" data-view="browse">View library <span>→</span></button></div>
+          <div class="continue-grid">
+            <article class="continue-card featured-continue"><div class="continue-cover cover-ember"><span>EP. 24</span><strong>EM<br />BER</strong></div><div class="continue-info"><span class="tag">CONTINUE READING</span><h3>Ember Hearts</h3><p>Chapter 24 · The lantern room</p><div class="progress-bar"><span style="width: 68%"></span></div><div class="continue-meta"><small>68% complete</small><button class="round-arrow">→</button></div></div></article>
+            <article class="continue-card"><div class="continue-cover cover-lost"><span>EP. 12</span><strong>LOST<br /><i>ORBIT</i></strong></div><div class="continue-info"><span class="tag">CONTINUE READING</span><h3>Lost Orbit</h3><p>Chapter 12 · Zero gravity</p><div class="progress-bar"><span style="width: 41%"></span></div><div class="continue-meta"><small>41% complete</small><button class="round-arrow">→</button></div></div></article>
+            <article class="continue-card"><div class="continue-cover cover-moon"><span>EP. 08</span><strong>MOON<br /><i>LORE</i></strong></div><div class="continue-info"><span class="tag">CONTINUE READING</span><h3>Moonlore</h3><p>Chapter 08 · The quiet tide</p><div class="progress-bar"><span style="width: 22%"></span></div><div class="continue-meta"><small>22% complete</small><button class="round-arrow">→</button></div></div></article>
+          </div>
+        </section>
+
+        <section class="section-block" id="library-section">
+          <div class="section-heading"><div><div class="eyebrow">CURATED FOR YOUR NIGHT</div><h2>Made for the mood</h2></div><div class="filter-pills"><button class="filter-pill active">All</button><button class="filter-pill">New</button><button class="filter-pill">Trending</button><button class="filter-pill">Completed</button></div></div>
+          <div class="title-grid" id="titleGrid"></div>
+        </section>
+
+        <section class="legal-banner"><div class="legal-icon">✦</div><div><strong>Read responsibly.</strong><p>Sun-Scan is built for original, licensed, and creator-approved releases. Upload only what you have the right to share.</p></div><button class="ghost-button" id="rightsButton">Our rights promise ↗</button></section>
+      </section>
+
+      <section class="view secondary-view" id="browse-view"><div class="page-intro"><div class="eyebrow">THE FULL CONSTELLATION</div><h1>Find your next<br /><em>favorite</em>.</h1><p>Explore by vibe, genre, or the feeling you want to take with you tonight.</p></div><div class="browse-toolbar"><div class="search-field"><span>⌕</span><input id="browseSearch" type="search" placeholder="Search titles, genres, creators..." /></div><div class="filter-pills"><button class="filter-pill active">All titles</button><button class="filter-pill">Fantasy</button><button class="filter-pill">Romance</button><button class="filter-pill">Action</button></div></div><div class="title-grid" id="browseGrid"></div></section>
+
+      <section class="view secondary-view" id="updates-view"><div class="page-intro"><div class="eyebrow">JUST LANDED</div><h1>The latest<br /><em>glow</em>.</h1><p>New chapters, fresh series, and the stories everyone is quietly talking about.</p></div><div class="updates-list" id="updatesList"></div></section>
+
+      <section class="view secondary-view admin-view" id="admin-view"><div class="page-intro admin-intro"><div class="eyebrow">STUDIO / ADMIN</div><h1>Shape the<br /><em>library</em>.</h1><p>Upload rights-cleared chapter pages, keep releases organized, and watch the library grow.</p><button class="ghost-button" id="adminLogoutButton">Log out</button></div><div class="admin-layout"><div class="admin-panel upload-panel"><div class="panel-heading"><div><span class="tag">CHAPTER STUDIO</span><h2>Upload a chapter</h2></div><span class="panel-status">Local demo</span></div><form id="uploadForm"><label class="field-label">Series title<input id="seriesTitle" required placeholder="e.g. Ember Hearts" /></label><div class="field-row"><label class="field-label">Chapter number<input id="chapterNumber" required type="number" min="1" placeholder="24" /></label><label class="field-label">Release note<input id="releaseNote" placeholder="The lantern room" /></label></div><label class="upload-drop" for="chapterFiles"><input id="chapterFiles" type="file" accept=".webp,image/webp" multiple required /><span class="upload-symbol">＋</span><strong>Drop .webp pages here</strong><small>Multiple pages accepted · order follows file name</small><span class="selected-files" id="selectedFiles">No pages selected</span></label><label class="rights-check"><input id="rightsCheck" type="checkbox" required /> <span>I confirm these pages are original, licensed, or creator-approved for publication.</span></label><button class="primary-button" type="submit">Publish chapter <span>↗</span></button><p class="form-feedback" id="uploadFeedback"></p></form></div><div class="admin-panel"><div class="panel-heading"><div><span class="tag">RELEASE QUEUE</span><h2>Published chapters</h2></div><span class="count-badge" id="uploadCount">0</span></div><div class="admin-releases" id="adminReleases"></div></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="brand footer-brand"><img class="brand-logo" src="public/sun-scan-logo-transparent.png" alt="Sun-Scan" /></div><p>Make room for stories that stay with you.</p><div class="footer-links"><button id="footerRights">Rights &amp; takedowns</button><button id="footerAbout">About the project</button></div></footer>
+
+    <div class="modal-backdrop" id="authModal" aria-hidden="true"><div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle"><button class="modal-close" data-close-modal="authModal">×</button><div class="auth-visual"><img src="public/sun-scan-logo-transparent.png" alt="Sun-Scan logo" /><div><span class="tag">WELCOME TO SUN-SCAN</span><h2>Keep your<br /><em>place.</em></h2><p>Save a series, pick up where you left off, and keep the reading list close.</p></div></div><div class="auth-form-wrap"><div class="auth-tabs"><button class="auth-tab active" data-auth-tab="login">Log in</button><button class="auth-tab" data-auth-tab="signup">Create account</button></div><form id="loginForm" class="auth-form"><h3 id="authTitle">Welcome back</h3><label class="field-label">Email<input id="loginEmail" type="email" required placeholder="you@example.com" /></label><label class="field-label">Password<input id="loginPassword" type="password" required placeholder="••••••••" /></label><div class="form-row"><label class="remember"><input id="rememberMe" type="checkbox" checked /> Keep me logged in</label><button class="inline-link" type="button" id="forgotButton">Forgot password?</button></div><button class="primary-button full-button" type="submit">Log in <span>↗</span></button><div class="or-divider"><span>or</span></div><button class="google-button" type="button" id="googleButton"><span class="google-g">G</span> Continue with Google</button><p class="form-feedback" id="loginFeedback"></p></form><form id="signupForm" class="auth-form hidden"><h3>Create your account</h3><label class="field-label">Email<input id="signupEmail" type="email" required placeholder="you@example.com" /></label><label class="field-label">Username<input id="signupUsername" required minlength="3" placeholder="midnight_reader" /></label><label class="field-label">Password<input id="signupPassword" type="password" required minlength="8" placeholder="8+ characters" /></label><div class="otp-row"><label class="field-label">Email OTP<input id="signupOtp" inputmode="numeric" maxlength="6" placeholder="6 digits" /></label><button class="secondary-button" type="button" id="sendOtpButton">Send OTP</button></div><p class="otp-hint" id="otpHint">We'll send a one-time code to verify your email.</p><button class="primary-button full-button" type="submit">Create account <span>↗</span></button><div class="or-divider"><span>or</span></div><button class="google-button" type="button" id="signupGoogleButton"><span class="google-g">G</span> Sign up with Google</button><p class="form-feedback" id="signupFeedback"></p></form></div></div></div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,1 +1,2 @@
-# Sun-scans1
+- Email: `admin@sunscan.test`
+- Password: `SunScanAdmin1!`
